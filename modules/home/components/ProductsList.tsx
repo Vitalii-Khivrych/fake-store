@@ -1,14 +1,14 @@
 import { ProductsItem } from "@/modules/home";
-import { allProductsType } from "@/services";
+import { AllProductsType } from "@/services";
 import { FC } from "react";
 
-type productsListProps = {
-  products: allProductsType;
+type ProductsListProps = {
+  products: AllProductsType;
 };
 
-export const ProductsList: FC<productsListProps> = ({ products }) => {
+export const ProductsList: FC<ProductsListProps> = ({ products }) => {
   return (
-    <ul>
+    <ul className="flex flex-wrap gap-3 pt-4">
       {products.map((item) => (
         <ProductsItem key={item.id} product={item} />
       ))}

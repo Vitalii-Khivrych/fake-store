@@ -2,18 +2,19 @@ import Link from "next/link";
 import Image from "next/image";
 import { FC } from "react";
 
-import { singleProductType } from "@/services";
+import { SingleProductType } from "@/services";
 
-type productsItemProps = {
-  product: singleProductType;
+type ProductsItemProps = {
+  product: SingleProductType;
 };
 
-export const ProductsItem: FC<productsItemProps> = ({ product }) => {
+export const ProductsItem: FC<ProductsItemProps> = ({ product }) => {
   const { id, description, price, rating, image, title, category } = product;
 
   return (
     <li
       key={id}
+      className="tab:w-[calc(100%/2-0.375rem)] desc:w-[calc(100%/3-0.5rem)] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       // style={{
       //   display: "flex",
       //   display: "-webkit-flex",
@@ -46,17 +47,13 @@ export const ProductsItem: FC<productsItemProps> = ({ product }) => {
         // }}
         href={`/details/${id}`}
       >
-        <div style={{ height: "150px", marginBottom: "15px" }}>
+        <div className="w-[200px] h-[350px] mb-4 mx-auto">
           <Image
+            className="rounded-t-lg w-full h-full object-contain "
             src={image}
             alt={description}
             width={100}
             height={100}
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "contain",
-            }}
           />
         </div>
         <div>

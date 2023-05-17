@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 
-export type layoutProps = { children: ReactNode };
+export type LayoutProps = { children: ReactNode };
 
-export type containerProps = { children: ReactNode };
+export type ContainerProps = { children: ReactNode };
+
+export type HeaderProps = { children: ReactNode };

@@ -1,9 +1,9 @@
 import { FC } from "react";
-import { containerProps } from "@/modules/common";
+import { ContainerProps } from "@/modules/common";
 
-export const Container: FC<containerProps> = ({ children }) => {
+export const Container: FC<ContainerProps> = ({ children }) => {
   return (
-    <div className="my-0 mx-auto py-0 px-4 mob:max-w-screen-mob tab:max-w-screen-tab desk:max-w-screen-desk">
+    <div className="my-0 mx-auto py-0 px-4 mob:w-[420px] tab:w-[768px] desk:w-[1280px]">
       {children}
     </div>
   );

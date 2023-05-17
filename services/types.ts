@@ -1,6 +1,6 @@
-export type allProductsType = singleProductType[];
+export type AllProductsType = SingleProductType[];
 
-export type singleProductType = {
+export type SingleProductType = {
   id: number;
   title: string;
   price: number;

@@ -1,10 +1,11 @@
 import Image from "next/image";
 
 import { Container } from "@/modules/common";
+import { FC } from "react";
 
-export const HeroSection = () => {
+export const HeroSection: FC = () => {
   return (
-    <section>
+    <section className="pt-24">
       <Container>
         <div className=" tab:flex ">
           <div>
