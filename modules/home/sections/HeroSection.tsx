@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { Container } from "@/modules/common";
+import { ButtonRedirect, Container } from "@/modules/common";
 import { FC } from "react";
 
 export const HeroSection: FC = () => {
@@ -15,6 +15,7 @@ export const HeroSection: FC = () => {
               Vero saepe totam tempora! Laborum, cum harum est quis officia odit voluptates
               doloribus provident, dolorem porro labore dolores!
             </p>
+            <ButtonRedirect to="/contacts" text="Contact us" />
           </div>
           <div className="mx-auto w-full h-[250px]  ">
             <Image
