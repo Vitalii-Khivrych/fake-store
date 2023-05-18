@@ -5,7 +5,7 @@ import { FC } from "react";
 
 export const HeroSection: FC = () => {
   return (
-    <section className="pt-24 pb-4" id="home">
+    <section className="pt-24 pb-4 bg-gray-100" id="home">
       <Container>
         <div className=" tab:flex   ">
           <div className="mb-3 tab:flex tab:flex-col tab:justify-center tab:mb-0  ">
@@ -25,7 +25,7 @@ export const HeroSection: FC = () => {
           </div>
           <div className="mx-auto w-full h-[250px]  tab:h-[350px] tab:ml-4 desk:h-[600px] ">
             <Image
-              className="object-cover w-full h-full"
+              className="object-cover w-full h-full rounded-lg "
               src="/images/hero-img.jpg"
               alt="online shopping"
               width={150}

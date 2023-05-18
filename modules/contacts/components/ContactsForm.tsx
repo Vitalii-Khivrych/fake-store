@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import Person from "/public/images/icons/person.svg";
@@ -30,6 +31,7 @@ export const ContactsForm: FC = () => {
 
   const onSubmit = (data: IFormInputs) => {
     console.log(data);
+    toast.success("We call you soon!");
     reset();
   };
 

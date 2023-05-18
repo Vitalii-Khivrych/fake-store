@@ -9,7 +9,7 @@ type ProductsSectionProps = {
 
 export const ProductsSection: FC<ProductsSectionProps> = ({ products }) => {
   return (
-    <section id="products" className="pb-5">
+    <section id="products" className="py-5">
       <Container>
         <h2 className="hidden">Products</h2>
         <ProductsList products={products} />

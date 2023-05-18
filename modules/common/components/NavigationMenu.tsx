@@ -26,8 +26,8 @@ export const NavigationMenu: FC = () => {
               offset={-84}
               onClick={() => handleClick(href)}
               className={`${
-                router.asPath === `/#${href}` ? "text-blue-400" : ""
-              } text-base desk:text-2xl hover:text-teal-400`}
+                router.asPath === `/#${href}` ? "text-rose-600" : ""
+              } text-base desk:text-2xl hover:text-amber-700`}
             >
               {text}
             </Link>

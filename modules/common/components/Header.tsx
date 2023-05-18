@@ -10,7 +10,7 @@ export const Header: FC = () => {
 
   return (
     <header
-      className={`w-full h-16  fixed  flex items-center  bg-slate-600 bg-opacity-75 desk:h-20 ${
+      className={`w-full h-16  fixed  flex items-center  bg-cyan-700 shadow-lg shadow-cyan-500/50  desk:h-20 rounded-b-2xl  ${
         currentRoute === "/404" ? "hidden" : "visible"
       }`}
     >
@@ -20,7 +20,7 @@ export const Header: FC = () => {
           {currentRoute === "/" ? (
             <NavigationMenu />
           ) : (
-            <Link href={"/"} className="text-slate-50 py-4 hover:text-blue-400">
+            <Link href={"/"} className="text-slate-50 py-4 hover:text-rose-600">
               <span>Home</span>
             </Link>
           )}
