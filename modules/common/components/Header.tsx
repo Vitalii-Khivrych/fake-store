@@ -9,7 +9,7 @@ export const Header: FC = () => {
   const currentRoute = router.pathname;
 
   return (
-    <header className="w-full h-20  fixed  flex items-center  bg-slate-600 bg-opacity-75">
+    <header className="w-full h-16  fixed  flex items-center  bg-slate-600 bg-opacity-75 desk:h-20">
       <Container>
         <div className="flex items-center justify-between  min-w-full">
           <Logo />
@@ -17,7 +17,7 @@ export const Header: FC = () => {
             <NavigationMenu />
           ) : (
             <Link href={"/"} className="text-slate-50 py-4 hover:text-blue-400">
-              <span>HOME</span>
+              <span>Home</span>
             </Link>
           )}
         </div>

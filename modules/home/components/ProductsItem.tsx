@@ -3,6 +3,7 @@ import Image from "next/image";
 import { FC } from "react";
 
 import { SingleProductType } from "@/services";
+import Star from "/public/images/icons/star.svg";
 
 type ProductsItemProps = {
   product: SingleProductType;
@@ -14,42 +15,12 @@ export const ProductsItem: FC<ProductsItemProps> = ({ product }) => {
   return (
     <li
       key={id}
-      className="tab:w-[calc(100%/2-0.375rem)] desc:w-[calc(100%/3-0.5rem)] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-      // style={{
-      //   display: "flex",
-      //   display: "-webkit-flex",
-      //   flexDirection: "column",
-      //   WebkitFlexDirection: "column",
-      //   justifyContent: "center",
-      //   backgroundColor: "#fff",
-      //   boxShadow: 5,
-      //   borderRadius: 1,
-      //   maxWidth: {
-      //     xs: "250px",
-      //     sm: "250px",
-      //     md: "280px",
-      //     lg: "300px",
-      //     xl: "300px",
-      //   },
-      //   // height: "400px",
-      //   width: "300px",
-      //   px: 2,
-      //   py: 2,
-      //   mx: 2,
-      //   mt: 5,
-      //   mb: 5,
-      // }}
+      className="flex flex-col justify-between p-4 bg-white border border-gray-400 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 "
     >
-      <Link
-        // style={{
-        //   textDecoration: "none",
-        //   color: "#000",
-        // }}
-        href={`/details/${id}`}
-      >
-        <div className="w-[200px] h-[350px] mb-4 mx-auto">
+      <Link className="cursor-pointer grow  hover:shadow-lg" href={`/details/${id}`}>
+        <div className="w-auto h-[250px] mb-4 mx-auto">
           <Image
-            className="rounded-t-lg w-full h-full object-contain "
+            className=" w-full h-full object-contain "
             src={image}
             alt={description}
             width={100}
@@ -57,23 +28,17 @@ export const ProductsItem: FC<ProductsItemProps> = ({ product }) => {
           />
         </div>
         <div>
-          <h3
-          // style={{
-          //   "&:hover": {
-          //     color: "secondary.main",
-          //   },
-          // }}
-          >
-            {title}
-          </h3>
+          <h3 className="text-lg font-bold mb-2 truncate ">{title}</h3>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <p>R${price}</p>
-            <p>{rating.rate}</p>
-            <p>({rating.rate})</p>
+            <p className=" p-1 bg-red-600 text-slate-100 rounded-md">${price}</p>
+            <div className="flex justify-center ">
+              <p className="text-base mr-1">{rating.rate}</p>
+              <Star className="h-5 w-5" />
+            </div>
           </div>
         </div>
       </Link>
-      <p>Category: {category}</p>
+      <p className="text-sm mt-2">Category: {category}</p>
     </li>
   );
 };

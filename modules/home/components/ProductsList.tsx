@@ -8,7 +8,7 @@ type ProductsListProps = {
 
 export const ProductsList: FC<ProductsListProps> = ({ products }) => {
   return (
-    <ul className="flex flex-wrap gap-3 pt-4">
+    <ul className="space-y-4 tab:space-y-0 tab:grid tab:grid-cols-2  tab:gap-4 desk:grid-cols-4 ">
       {products.map((item) => (
         <ProductsItem key={item.id} product={item} />
       ))}

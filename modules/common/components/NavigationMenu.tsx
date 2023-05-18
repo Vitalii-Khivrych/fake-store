@@ -12,10 +12,15 @@ export const NavigationMenu: FC = () => {
 
   return (
     <nav>
-      <ul className="flex gap-12 text-slate-50 ">
+      <ul className="flex gap-3 text-slate-50 tab:gap-12 desk:gap-16 ">
         {navigation.map(({ id, text, href }) => (
           <li key={id} className="cursor-pointer">
-            <Link href={href} className={router.pathname === `${href}` ? "text-blue-400" : ""}>
+            <Link
+              href={href}
+              className={`${
+                router.pathname === `${href}` ? "text-blue-400" : ""
+              } text-base desk:text-2xl`}
+            >
               {text}
             </Link>
           </li>

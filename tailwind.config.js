@@ -13,8 +13,8 @@ module.exports = {
       },
     },
     screens: {
-      mob: "480px",
-      // => @media (min-width: 480px) { ... }
+      mob: "420px",
+      // => @media (min-width: 420px) { ... }
 
       tab: "768px",
       // => @media (min-width: 768px) { ... }

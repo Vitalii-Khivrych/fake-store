@@ -16,9 +16,9 @@ interface IFormInputs {
 }
 
 const inputStyle = {
-  label: "text-xs text-slate-800 block mb-1",
+  label: "text-xs text-slate-800 block mb-1 desk:text-sm",
   input:
-    "input peer w-full h-10 pl-10 text-black outline-none border-[1px] border-solid border-[rgba(33, 33, 33, 0.2] rounded hover:border-sky-600  focus:border-sky-600 ]",
+    "input peer w-full h-10 pl-10 text-black outline-none border-[1px] border-solid border-[rgba(33, 33, 33, 0.2] rounded hover:border-sky-600  focus:border-sky-600 ]  desk:h-11",
   svg: "absolute left-3 top-1/2 w-4 h-4 translate-y-[-50%] peer-[.input]:peer-focus:text-sky-600 peer-[.input]:peer-hover:text-sky-600",
 };
 
@@ -40,7 +40,10 @@ export const ContactsForm: FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="mob:max-w-[388px] tab:w-2/3 tab:max-w-none tab:mx-auto desk:w-1/2 "
+    >
       <div className="mb-5">
         <label className={label} htmlFor="name">
           Name
@@ -89,7 +92,7 @@ export const ContactsForm: FC = () => {
       <div className="mb-7 policy">
         <input
           type="checkbox"
-          className="mr-2 leading-tight"
+          className="mr-2 leading-tight h-3 w-3"
           id="policy"
           {...register("policyCheck")}
         />
@@ -101,7 +104,7 @@ export const ContactsForm: FC = () => {
         )}
       </div>
 
-      <Button type="submit" text="Send" />
+      <Button type="submit" text="Send" style="mx-auto" />
     </form>
   );
 };
