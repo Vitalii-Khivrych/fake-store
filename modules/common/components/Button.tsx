@@ -1,10 +1,6 @@
 import { FC } from "react";
 
-type ButtonProps = {
-  type: "submit" | "button" | "reset";
-  text: string;
-  style?: string;
-};
+import { ButtonProps } from "@/modules/common";
 
 export const Button: FC<ButtonProps> = ({ type, text, style }) => {
   return (

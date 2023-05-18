@@ -1,11 +1,7 @@
 import Link from "next/link";
 import { FC } from "react";
 
-type ButtonRedirectProps = {
-  text: string;
-  to: string;
-  style?: string;
-};
+import { ButtonRedirectProps } from "@/modules/common";
 
 export const ButtonRedirect: FC<ButtonRedirectProps> = ({ text, to, style }) => {
   return (

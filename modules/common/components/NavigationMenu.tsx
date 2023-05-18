@@ -10,6 +10,10 @@ export const navigation = [
 export const NavigationMenu: FC = () => {
   const router = useRouter();
 
+  const handleClick = (href: string) => {
+    router.push(`/#${href}`);
+  };
+
   return (
     <nav>
       <ul className="flex gap-3 text-slate-50 tab:gap-12 desk:gap-16 ">
@@ -19,10 +23,11 @@ export const NavigationMenu: FC = () => {
               to={href}
               smooth={true}
               duration={500}
-              offset={-70}
+              offset={-84}
+              onClick={() => handleClick(href)}
               className={`${
-                router.pathname === `${href}` ? "text-blue-400" : ""
-              } text-base desk:text-2xl`}
+                router.asPath === `/#${href}` ? "text-blue-400" : ""
+              } text-base desk:text-2xl hover:text-teal-400`}
             >
               {text}
             </Link>

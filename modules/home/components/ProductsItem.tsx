@@ -15,9 +15,9 @@ export const ProductsItem: FC<ProductsItemProps> = ({ product }) => {
   return (
     <li
       key={id}
-      className="flex flex-col justify-between p-4 bg-white border border-gray-400 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 "
+      className="flex flex-col justify-between p-4 bg-white border border-gray-400 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:shadow-lg"
     >
-      <Link className="cursor-pointer grow  hover:shadow-lg" href={`/details/${id}`}>
+      <Link className="cursor-pointer grow" href={`/details/${id}`}>
         <div className="w-auto h-[250px] mb-4 mx-auto">
           <Image
             className=" w-full h-full object-contain "

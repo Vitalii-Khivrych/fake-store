@@ -5,15 +5,9 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import Person from "/public/images/icons/person.svg";
 import Phone from "/public/images/icons/phone.svg";
 import Email from "/public/images/icons/email.svg";
-import { Button } from "@/modules/common";
-import { schema } from "@/modules/contacts";
 
-interface IFormInputs {
-  name: string;
-  phone: number;
-  email: string;
-  policyCheck: boolean;
-}
+import { Button } from "@/modules/common";
+import { schema, IFormInputs } from "@/modules/contacts";
 
 const inputStyle = {
   label: "text-xs text-slate-800 block mb-1 desk:text-sm",
