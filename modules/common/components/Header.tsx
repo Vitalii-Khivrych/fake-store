@@ -9,7 +9,11 @@ export const Header: FC = () => {
   const currentRoute = router.pathname;
 
   return (
-    <header className="w-full h-16  fixed  flex items-center  bg-slate-600 bg-opacity-75 desk:h-20">
+    <header
+      className={`w-full h-16  fixed  flex items-center  bg-slate-600 bg-opacity-75 desk:h-20 ${
+        currentRoute === "/404" ? "hidden" : "visible"
+      }`}
+    >
       <Container>
         <div className="flex items-center justify-between  min-w-full">
           <Logo />

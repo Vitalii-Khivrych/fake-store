@@ -1,10 +1,10 @@
-import Link from "next/link";
+import { Link } from "react-scroll";
 import { useRouter } from "next/router";
 import { FC } from "react";
 
 export const navigation = [
-  { id: 1, text: "Home", href: "/" },
-  { id: 2, text: "Products", href: "#products" },
+  { id: 1, text: "Home", href: "home" },
+  { id: 2, text: "Products", href: "products" },
 ];
 
 export const NavigationMenu: FC = () => {
@@ -16,7 +16,10 @@ export const NavigationMenu: FC = () => {
         {navigation.map(({ id, text, href }) => (
           <li key={id} className="cursor-pointer">
             <Link
-              href={href}
+              to={href}
+              smooth={true}
+              duration={500}
+              offset={-70}
               className={`${
                 router.pathname === `${href}` ? "text-blue-400" : ""
               } text-base desk:text-2xl`}

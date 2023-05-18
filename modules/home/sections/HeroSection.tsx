@@ -5,7 +5,7 @@ import { FC } from "react";
 
 export const HeroSection: FC = () => {
   return (
-    <section className="pt-24 pb-4">
+    <section className="pt-24 pb-4" id="home">
       <Container>
         <div className=" tab:flex   ">
           <div className="mb-3 tab:flex tab:flex-col tab:justify-center tab:mb-0  ">
