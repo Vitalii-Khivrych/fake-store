@@ -8,13 +8,13 @@ const montserrat = Montserrat({ subsets: ['latin'] });
 
 export const Layout: FC<LayoutProps> = ({ children }) => {
 	return (
-		<>
+		<div className="flex min-h-screen flex-col">
 			<Head>
 				<title>Fake Store</title>
 			</Head>
 			<Header />
-			<main className={` ${montserrat.className}`}>{children}</main>
+			<main className={`flex-grow ${montserrat.className}`}>{children}</main>
 			<Footer />
-		</>
+		</div>
 	);
 };
