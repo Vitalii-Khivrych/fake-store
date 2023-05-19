@@ -8,13 +8,14 @@ import Phone from '/public/images/icons/phone.svg';
 import Email from '/public/images/icons/email.svg';
 
 import { Button } from '@/modules/common';
-import { schema, IFormInputs } from '@/modules/contacts';
+import { schema } from '@/modules/contacts';
+import { IFormInputs } from './types';
 
 const inputStyle = {
 	label: 'text-xs text-slate-800 block mb-1 desk:text-sm',
 	input:
-		'input peer w-full h-10 pl-10 pr-2 text-black outline-none border-[1px] border-solid border-[rgba(33, 33, 33, 0.2] rounded  hover:border-sky-600  focus:border-sky-600 ]  desk:h-11',
-	svg: 'absolute left-3 top-1/2 w-4 h-4 translate-y-[-50%] peer-[.input]:peer-focus:text-sky-600 peer-[.input]:peer-hover:text-sky-600',
+		'input peer w-full h-10 pl-10 pr-2 text-black outline-none border-[1px] border-solid border-[rgba(33, 33, 33, 0.2] rounded transition delay-150 ease-in  hover:border-sky-600  focus:border-sky-600 ]  desk:h-11',
+	svg: 'absolute left-3 top-1/2 w-4 h-4 translate-y-[-50%] transition delay-150 ease-in peer-[.input]:peer-focus:text-sky-600 peer-[.input]:peer-hover:text-sky-600',
 };
 
 export const ContactsForm: FC = () => {

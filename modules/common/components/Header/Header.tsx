@@ -21,7 +21,9 @@ export const Header: FC = () => {
 						<NavigationMenu />
 					) : (
 						<Link href={'/'} className="py-4 text-slate-50 hover:text-rose-600">
-							<span className="hover:text-amber-700` text-base desk:text-2xl">Home</span>
+							<span className="text-base transition delay-75 ease-in hover:text-amber-700 desk:text-2xl">
+								Home
+							</span>
 						</Link>
 					)}
 				</div>

@@ -1,1 +1,1 @@
-export * from "./ContactFormSection";
+export * from './ContactFormSection/ContactFormSection';

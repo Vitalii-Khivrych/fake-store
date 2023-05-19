@@ -7,7 +7,7 @@ export const SocialLinks: FC = () => {
 		<ul className="mb-1 flex items-center justify-center space-x-5  tab:space-x-7">
 			{socialLinksItems.map(({ id, alt, href, icon: Icon }) => (
 				<li
-					className="group flex h-8 w-8 items-center justify-center rounded-full  hover:bg-neutral-200 tab:h-9 tab:w-9"
+					className="group flex  h-8 w-8 items-center justify-center rounded-full transition delay-75 ease-in hover:bg-neutral-200 tab:h-9 tab:w-9"
 					key={id}
 				>
 					<a
@@ -15,7 +15,7 @@ export const SocialLinks: FC = () => {
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label={alt}
-						className="group-hover:text-cyan-900"
+						className="transition delay-75  ease-in group-hover:text-cyan-900"
 					>
 						<Icon className=" h-4 w-4 tab:h-5 tab:w-5" />
 					</a>

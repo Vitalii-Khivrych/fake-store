@@ -2,7 +2,8 @@ import Head from 'next/head';
 import { FC } from 'react';
 import { Montserrat } from 'next/font/google';
 
-import { LayoutProps, Header, Footer } from '@/modules/common';
+import { Header, Footer } from '@/modules/common';
+import { LayoutProps } from './types';
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 
