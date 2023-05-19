@@ -1,7 +1,10 @@
-export * from "./Layout";
-export * from "./Container";
-export * from "./Logo";
-export * from "./Header";
-export * from "./NavigationMenu";
-export * from "./ButtonRedirect";
-export * from "./Button";
+export * from './Layout/Layout';
+export * from './Container/Container';
+export * from './Logo';
+export * from './SocialLinks/SocialLinks';
+
+export * from './Header/Header';
+export * from './Footer/Footer';
+export * from './NavigationMenu';
+export * from './ButtonRedirect/ButtonRedirect';
+export * from './Button/Button';
