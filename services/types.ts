@@ -12,3 +12,5 @@ export type SingleProductType = {
 		count: number;
 	};
 };
+
+export type CategoriesType = string[];
