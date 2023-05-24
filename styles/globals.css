@@ -20,3 +20,7 @@ body {
 	color: rgb(var(--foreground-rgb));
 	height: 100%;
 }
+
+.rsis-image {
+	background-position: 50% 0%;
+}

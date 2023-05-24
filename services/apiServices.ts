@@ -23,9 +23,9 @@ export async function fetchAllProducts() {
 	}
 }
 
-export async function fetchSingleProduct(productId: string) {
+export async function fetchSingleProduct(id: string) {
 	try {
-		const url = `${BASE_URL}/${productId}?`;
+		const url = `${BASE_URL}/${id}?`;
 		const { data } = await axios.get<SingleProductType>(url);
 		return data;
 	} catch (error) {

@@ -17,7 +17,7 @@ export const ProductsItem: FC<ProductsItemProps> = ({ product }) => {
 			key={id}
 			className="mx-auto flex max-w-[320px] flex-col justify-between rounded-lg border border-gray-400 bg-white p-4  transition delay-150 ease-linear hover:scale-105 hover:shadow-lg tab:mx-0 tab:max-w-none"
 		>
-			<Link className="grow cursor-pointer" href={`/details/${id}`}>
+			<Link className="grow cursor-pointer" href={`/product/${id}`}>
 				<div className="mx-auto mb-4 h-[260px] w-[180px] tab:h-[300px]">
 					<Image
 						className=" h-full w-full object-contain "

@@ -2,10 +2,7 @@ import { Link } from 'react-scroll';
 import { useRouter } from 'next/router';
 import { FC } from 'react';
 
-export const navigation = [
-	{ id: 1, text: 'Home', href: 'home' },
-	{ id: 2, text: 'Products', href: 'products' },
-];
+import { navigation } from './data';
 
 export const NavigationMenu: FC = () => {
 	const router = useRouter();

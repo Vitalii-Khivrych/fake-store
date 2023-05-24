@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -8,15 +8,8 @@ import Phone from '/public/images/icons/phone.svg';
 import Email from '/public/images/icons/email.svg';
 
 import { Button } from '@/modules/common';
-import { schema } from '@/modules/contacts';
+import { schema, Input, Checkbox } from '@/modules/contacts';
 import { IFormInputs } from './types';
-
-const inputStyle = {
-	label: 'text-xs text-slate-800 block mb-1 desk:text-sm',
-	input:
-		'input peer w-full h-10 pl-10 pr-2 text-black outline-none border-[1px] border-solid border-[rgba(33, 33, 33, 0.2] rounded transition delay-150 ease-in  hover:border-sky-600  focus:border-sky-600 ]  desk:h-11',
-	svg: 'absolute left-3 top-1/2 w-4 h-4 translate-y-[-50%] transition delay-150 ease-in peer-[.input]:peer-focus:text-sky-600 peer-[.input]:peer-hover:text-sky-600',
-};
 
 export const ContactsForm: FC = () => {
 	const {
@@ -27,8 +20,6 @@ export const ContactsForm: FC = () => {
 	} = useForm<IFormInputs>({
 		resolver: yupResolver(schema),
 	});
-
-	const { label, input, svg } = inputStyle;
 
 	const onSubmit = (data: IFormInputs) => {
 		console.log(data);
@@ -41,65 +32,36 @@ export const ContactsForm: FC = () => {
 			onSubmit={handleSubmit(onSubmit)}
 			className="mob:max-w-[388px]  tab:mx-auto tab:w-2/3 tab:max-w-none desk:w-1/2 "
 		>
-			<div className="mb-5">
-				<label className={label} htmlFor="name">
-					Name
-				</label>
-				<div className="relative ">
-					<input type="text" aria-label="Name" className={input} id="name" {...register('name')} />
-					<Person className={svg} />
-				</div>
-				{errors.name && <p className="absolute text-xs text-red-500">{errors.name?.message}</p>}
-			</div>
+			<Input
+				type="text"
+				text="name"
+				icon={Person}
+				errors={errors.name?.message}
+				register={{ ...register('name') }}
+			/>
 
-			<div className="mb-5">
-				<label className={label} htmlFor="phone">
-					Phone
-				</label>
-				<div className="relative">
-					<input
-						type="tel"
-						aria-label="Phone"
-						className={input}
-						id="phone"
-						{...register('phone')}
-					/>
-					<Phone className={svg} />
-					{errors.phone && <p className="absolute text-xs text-red-500">{errors.phone?.message}</p>}
-				</div>
-			</div>
+			<Input
+				type="tel"
+				text="Phone"
+				icon={Phone}
+				errors={errors.phone?.message}
+				register={{ ...register('phone') }}
+			/>
 
-			<div className="mb-5">
-				<label className={label} htmlFor="email">
-					Email
-				</label>
-				<div className="relative">
-					<input
-						type="email"
-						aria-label="Email"
-						className={input}
-						id="email"
-						{...register('email')}
-					/>
-					<Email className={svg} />
-					{errors.email && <p className="absolute text-xs text-red-500">{errors.email?.message}</p>}
-				</div>
-			</div>
+			<Input
+				type="email"
+				text="Email"
+				icon={Email}
+				errors={errors.email?.message}
+				register={{ ...register('email') }}
+			/>
 
-			<div className="policy mb-7">
-				<input
-					type="checkbox"
-					className="mr-2 h-3 w-3 leading-tight"
-					id="policy"
-					{...register('policyCheck')}
-				/>
-				<label className="text-xs desk:text-sm" htmlFor="policy">
-					I agree with the newsletter and accept;
-				</label>
-				{errors.policyCheck && (
-					<p className="absolute text-xs text-red-500">{errors.policyCheck?.message}</p>
-				)}
-			</div>
+			<Checkbox
+				id="policy"
+				text="I agree with the newsletter and accept"
+				register={{ ...register('policyCheck') }}
+				errors={errors.policyCheck?.message}
+			/>
 
 			<Button type="submit" text="Send" style="mx-auto" />
 		</form>
