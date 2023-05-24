@@ -13,11 +13,12 @@ export const NavigationMenu: FC = () => {
 
 	return (
 		<nav>
-			<ul className="flex gap-3 text-slate-50 tab:gap-12 desk:gap-16 ">
+			<ul className="flex gap-3 font-semibold text-slate-50 tab:gap-12 desk:gap-16">
 				{navigation.map(({ id, text, href }) => (
 					<li key={id} className="cursor-pointer">
 						<Link
 							to={href}
+							href={href}
 							smooth={true}
 							duration={500}
 							offset={-84}

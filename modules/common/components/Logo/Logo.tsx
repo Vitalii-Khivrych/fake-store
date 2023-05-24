@@ -4,7 +4,7 @@ import { FC } from 'react';
 
 export const Logo: FC = () => {
 	return (
-		<Link href="/" className="flex animate-bounce text-xl desk:text-3xl">
+		<Link href="/" className="flex animate-bounce text-xl font-semibold desk:text-3xl">
 			<Image
 				className="h-6 w-7 desk:h-9 desk:w-10"
 				src="/images/logo.png"
@@ -13,7 +13,7 @@ export const Logo: FC = () => {
 				height={100}
 				quality={100}
 			/>
-			<span className=" ml-3 mr-1 text-red-500">Fake</span>
+			<span className=" ml-3 mr-1 text-red-600">Fake</span>
 			Store
 		</Link>
 	);
